@@ -40,7 +40,6 @@ AddEventHandler('salar', function(salar)
 			salar = v[2]
 			deLaGrupa = v[3]
 			vRP.giveMoney(user_id,salar)
-			vRP.givePuncte(user_id, 1)
 			vRPclient._notifyPicture(player,pictura, 9, titlu, false, mesaj..salar.. "~w~. "..deLaGrupa)
 		end
 	end

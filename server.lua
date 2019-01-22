@@ -1,4 +1,3 @@
---Settings--
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 
@@ -42,7 +41,7 @@ AddEventHandler('salar', function(salar)
 			deLaGrupa = v[3]
 			vRP.giveMoney(user_id,salar)
 			vRP.givePuncte(user_id, 1)
-			vRPclient.notifyPicture(player,pictura, 9, titlu, false, mesaj..salar.. "~w~. "..deLaGrupa)
+			vRPclient._notifyPicture(player,pictura, 9, titlu, false, mesaj..salar.. "~w~. "..deLaGrupa)
 		end
 	end
 end)

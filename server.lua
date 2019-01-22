@@ -30,19 +30,19 @@ salarii = {
 
 RegisterServerEvent('salar')
 AddEventHandler('salar', function(salar)
-	local user_id = vRP.getUserId({source})
-	local player = vRP.getUserSource({user_id})
+	local user_id = vRP.getUserId(source)
+	local player = vRP.getUserSource(user_id)
 	pictura = "CHAR_ANDREAS"
 	titlu = "Krimes Bank"
 	mesaj = "Ai primit salariul ~g~$"
 	for i, v in pairs(salarii) do
 		permisiune = v[1]
-		if(vRP.hasPermission({user_id, permisiune}))then
+		if(vRP.hasPermission(user_id, permisiune))then
 			salar = v[2]
 			deLaGrupa = v[3]
-			vRP.giveMoney({user_id,salar})
-			vRP.givePuncte({user_id, 1})
-			vRPclient.notifyPicture(player,{pictura, 9, titlu, false, mesaj..salar.. "~w~. "..deLaGrupa})
+			vRP.giveMoney(user_id,salar)
+			vRP.givePuncte(user_id, 1)
+			vRPclient.notifyPicture(player,pictura, 9, titlu, false, mesaj..salar.. "~w~. "..deLaGrupa)
 		end
 	end
 end)
